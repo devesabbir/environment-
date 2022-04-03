@@ -20,7 +20,7 @@ module.exports = {
         module : {
             rules : [
                 {
-                    test :  /\.js$/,
+                    test :  /\.js$/i,
                     exclude : /(node_modules)/,
                     use :{
                         loader : 'babel-loader',
@@ -30,11 +30,11 @@ module.exports = {
                     }
                 },
                 {
-                    test :  /\.(css|scss)$/,
+                    test :  /\.(css|scss)$/i,
                     use : ['style-loader','css-loader','sass-loader']
                 },
                 {
-                    test :  /\.(jpg|jpeg|png|gif|svg|webp)$/,
+                    test :  /\.(jpg|jpeg|png|gif|svg|webp)$/i,
                     type : 'asset/resource'
                 }
             ]
