@@ -6,7 +6,8 @@ module.exports = {
         entry : path.resolve(__dirname , './src/index.js'),
         output :{
             path : path.resolve(__dirname , 'bundle'),
-            filename : 'bundle.js'
+            filename : 'bundle.js',
+            assetModuleFilename : '[name][ext]' 
         },
         devServer : {
              static : {
@@ -31,6 +32,10 @@ module.exports = {
                 {
                     test :  /\.(css|scss)$/,
                     use : ['style-loader','css-loader','sass-loader']
+                },
+                {
+                    test :  /\.(jpg|jpeg|png|gif|svg|webp)$/,
+                    type : 'asset/resource'
                 }
             ]
         },
