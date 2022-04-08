@@ -7,7 +7,8 @@ module.exports = {
         output :{
             path : path.resolve(__dirname , 'bundle'),
             filename : 'bundle.js',
-            assetModuleFilename : '[name][ext]' 
+            assetModuleFilename : '[name][ext]',
+            clean : true
         },
         devServer : {
              static : {
